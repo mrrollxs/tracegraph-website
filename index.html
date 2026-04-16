@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TraceGraph - Download</title> 
+    <!-- Favicon (Sostituisci con il link reale della tua icona) -->
+    <link rel="icon" type="image/png" href="https://via.placeholder.com/32">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #0a0f1e 0%, #1a1f2e 100%);
+            color: #E2E8F0;
+            padding: 40px 20px;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            flex: 1;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #00F2EA 0%, #00BFA5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #a0aec0;
+            margin-bottom: 3.5rem;
+        }
+
+        .download-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+            margin-bottom: 3rem;
+        }
+
+        .download-card {
+            background: rgba(45, 55, 72, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 32px 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            backdrop-filter: blur(10px);
+        }
+
+        .download-card:hover {
+            transform: translateY(-8px);
+            border-color: #00F2EA;
+            box-shadow: 0 10px 30px rgba(0, 242, 234, 0.1);
+        }
+
+        .platform-icon {
+            font-size: 3rem;
+            margin-bottom: 16px;
+            filter: drop-shadow(0 0 10px rgba(0, 242, 234, 0.3));
+        }
+
+        .platform-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        .platform-desc {
+            font-size: 0.95rem;
+            color: #a0aec0;
+            margin-bottom: 24px;
+            min-height: 60px;
+            flex-grow: 1;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-bottom: 8px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #00F2EA 0%, #00BFA5 100%);
+            color: #0a0f1e;
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-primary:hover, .btn-secondary:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 20px rgba(0, 242, 234, 0.3);
+        }
+
+        .btn-secondary:hover {
+            border-color: #00F2EA;
+            background: rgba(0, 242, 234, 0.1);
+        }
+
+        .download-info {
+            font-size: 0.8rem;
+            color: #718096;
+            margin-top: 12px;
+        }
+
+        .privacy-banner {
+            background: rgba(0, 242, 234, 0.05);
+            border: 1px solid rgba(0, 242, 234, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+            color: #cbd5e0;
+            font-size: 0.95rem;
+        }
+
+        .privacy-banner strong {
+            color: #00F2EA;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding-bottom: 2rem;
+            color: #718096;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #718096;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #00F2EA;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .download-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Download TraceGraph</h1>
+        <p class="subtitle">Take back your data. Clean your digital footprint locally.</p>
+
+        <div class="download-grid">
+            
+            <!-- WINDOWS -->
+            <div class="download-card">
+                <div class="platform-icon">🪟</div>
+                <h3 class="platform-name">Windows</h3>
+                <p class="platform-desc">For Windows 10 & 11. Includes the email scanner and local dashboard.</p>
+                <!-- Inserisci qui il link alla release .exe di Github -->
+                <a href="https://github.com/TUO-USER/tracegraph/releases/latest/download/TraceGraph-Setup.exe" class="download-btn btn-primary">Download .exe</a>
+                <p class="download-info">Version 1.0.0 &bull; 64-bit</p>
+            </div>
+            
+            <!-- macOS -->
+            <div class="download-card">
+                <div class="platform-icon">🍏</div>
+                <h3 class="platform-name">macOS</h3>
+                <p class="platform-desc">Universal binary for Macs with Apple Silicon (M1/M2/M3) and Intel processors.</p>
+                <!-- Inserisci qui il link alla release .dmg di Github -->
+                <a href="https://github.com/TUO-USER/tracegraph/releases/latest/download/TraceGraph-Mac.dmg" class="download-btn btn-primary">Download .dmg</a>
+                <p class="download-info">Version 1.0.0 &bull; Requires macOS 11+</p>
+            </div>
+
+            <!-- LINUX (Opzionale, ma ottimo per tool privacy) -->
+            <div class="download-card">
+                <div class="platform-icon">🐧</div>
+                <h3 class="platform-name">Linux</h3>
+                <p class="platform-desc">Portable AppImage compatible with Ubuntu, Fedora, Debian and more.</p>
+                <!-- Inserisci qui il link alla release .AppImage di Github -->
+                <a href="https://github.com/TUO-USER/tracegraph/releases/latest/download/TraceGraph.AppImage" class="download-btn btn-secondary">Download AppImage</a>
+                <p class="download-info">Version 1.0.0 &bull; x86_64</p>
+            </div>
+
+            <!-- BROWSER EXTENSION -->
+            <div class="download-card">
+                <div class="platform-icon">🛡️</div>
+                <h3 class="platform-name">Cookie Radar</h3>
+                <p class="platform-desc">Companion browser extension. Requires the desktop app to function.</p>
+                <a href="#" class="download-btn btn-secondary">Chrome Web Store</a>
+                <p class="download-info">Firefox Add-on coming soon</p>
+            </div>
+
+        </div>
+
+        <!-- Privacy Banner - Rassicura l'utente prima del download -->
+        <div class="privacy-banner">
+            🔒 <strong>Zero-Cloud Guarantee:</strong> TraceGraph runs 100% locally on your machine. Your emails, passwords, and scanned data are never uploaded to any external server.
+        </div>
+        
+    </div>
+
+    <footer>
+        <p>&copy; 2026 TraceGraph. Built for privacy.</p>
+        <div style="margin-top: 10px;">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Support</a>
+        </div>
+    </footer>
+</body>
+</html>
